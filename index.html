@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceHub — Банковские решения</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0F0F0F;
+            --surface: #1F1F1F;
+            --primary: #FFFFFF;
+            --secondary: #A0A0A0;
+            --accent: #4A90E2;
+            --divider: #333333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--primary);
+            line-height: 1.7;
+        }
+
+        .hero {
+            padding: 8rem 0;
+            background: linear-gradient(45deg, var(--bg), #181818);
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .process-section {
+            padding: 6rem 0;
+            background: var(--surface);
+        }
+
+        .process-timeline {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin: 4rem auto;
+        }
+
+        .process-item {
+            position: relative;
+            width: 20%;
+            text-align: center;
+        }
+
+        .step-marker span {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-marker .line {
+            position: absolute;
+            height: 2px;
+            background: var(--divider);
+            width: 100%;
+            top: 25px;
+            left: 50%;
+            z-index: 1;
+        }
+
+        .bank-offers {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .bank-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--divider);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .bank-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .faq-section {
+            padding: 6rem 0;
+        }
+
+        .faq-item {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-main {
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .process-timeline {
+                flex-direction: column;
+            }
+            
+            .process-item {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 3rem;
+            }
+            
+            .step-marker span {
+                margin-left: 0;
+            }
+            
+            .step-marker .line {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Герой -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1 class="mb-4">Профессиональное оформление банковских продуктов</h1>
+            <p class="text-secondary lead">Быстрое открытие счетов для ИП и ООО</p>
+        </div>
+    </section>
+
+    <!-- Как мы работаем -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Как мы работаем</h2>
+            <div class="process-timeline">
+                <!-- Этап 1 -->
+                <div class="process-item">
+                    <div class="step-marker">
+                        <span>1</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Консультация</h4>
+                        <p class="text-secondary">Анализ потребностей бизнеса</p>
+                    </div>
+                </div>
+
+                <!-- Этап 2 -->
+                <div class="process-item">
+                    <div class="step-marker">
+                        <span>2</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Подбор банка</h4>
+                        <p class="text-secondary">Выбор оптимальных условий</p>
+                    </div>
+                </div>
+
+                <!-- Этап 3 -->
+                <div class="process-item">
+                    <div class="step-marker">
+                        <span>3</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Оформление</h4>
+                        <p class="text-secondary">Подача документов онлайн</p>
+                    </div>
+                </div>
+
+                <!-- Этап 4 -->
+                <div class="process-item">
+                    <div class="step-marker">
+                        <span>4</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="step-content">
+                        <h4>Проверка</h4>
+                        <p class="text-secondary">Верификация данных банком</p>
+                    </div>
+                </div>
+
+                <!-- Этап 5 -->
+                <div class="process-item">
+                    <div class="step-marker">
+                        <span>5</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Результат</h4>
+                        <p class="text-secondary">Получение документов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Банковские офферы -->
+    <section class="bank-offers">
+        <div class="container">
+            <h2 class="text-center mb-5">Партнёрские предложения</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                      <h3>Карточка</h3>
+                      <ul class="text-secondary mt-3">
+                        <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                      </ul>
+                      <a href="https://example.com" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                  </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                        <h3>Карточка</h3>
+                        <ul class="text-secondary mt-3">
+                            <li>✓ Мультивалютное обслуживание</li>
+                            <li>✓ Конвертация без комиссии</li>
+                            <li>✓ Онлайн-управление</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                        <h3>Карточка</h3>
+                        <ul class="text-secondary mt-3">
+                            <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="bank-card">
+                        <h3>Карточка</h3>
+                        <ul class="text-secondary mt-3">
+                            <li>✓ Мультивалютное обслуживание</li>
+                        <li>✓ Конвертация без комиссии</li>
+                        <li>✓ Онлайн-управление</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary w-100 mt-3">Оформить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Добавить после секции с банковскими офферами -->
+<section class="reviews-section py-6">
+    <div class="container position-relative">
+        <h2 class="text-center mb-5">Отзывы клиентов</h2>
+        
+        <!-- Слайдер -->
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+                <!-- Слайд 1 -->
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="avatar-container">
+                            <img src="svgs/man1.png"
+                                alt="Кирилл Жуков"
+                                class="round-avatar">
+                            </div>
+                            <div class="review-author">
+                                <h5>Кирилл Жуков</h5>
+                                <span class="text-muted">Стартап в IT</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>За 3 дня оформили валютный счёт в евро и долларах. Помогли с налоговыми нюансами — без вашей консультации точно допустил бы ошибки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="avatar-container">
+                            <img src="svgs/man3.png"
+                                alt="Максим Игнатьев"
+                                class="round-avatar">
+                            </div>
+                            <div class="review-author">
+                                <h5>Максим Игнатьев</h5>
+                                <span class="text-muted">ООО "ТехноСтарт"</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>Сравнил 5 банков через ваш сервис — нашли оптимальный тариф РКО с бесплатными платежами. Персональный менеджер отвечал даже в выходные!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="avatar-container">
+                            <img src="svgs/man2.png"
+                                alt="Артём Соколов"
+                                class="round-avatar">
+                            </div>
+                            <div class="review-author">
+                                <h5>Артём Соколов</h5>
+                                <span class="text-muted">ИП, грузоперевозки</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>После вашего кредита под 9% смог обновить автопарк. Одобрили на 1.5 млн даже с моей сложной кредитной историей. Не ожидал!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="avatar-container">
+                            <img src="svgs/dev3.png"
+                                alt="Алина Петрова"
+                                class="round-avatar">
+                            </div>
+                            <div class="review-author">
+                                <h5>Алина Петрова</h5>
+                                <span class="text-muted">Салон красоты</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>Мобильное приложение супер! Вижу баланс, плачу поставщикам и выдаю зарплату прямо с телефона. Впервые за 5 лет работы всё под контролем.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="avatar-container">
+                            <img src="svgs/man1.png"
+                                alt="Кирилл Жуков"
+                                class="round-avatar">
+                            </div>
+                            <div class="review-author">
+                                <h5>Кирилл Жуков</h5>
+                                <span class="text-muted">Стартап в IT</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>За 3 дня оформили валютный счёт в евро и долларах. Помогли с налоговыми нюансами — без вашей консультации точно допустил бы ошибки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="avatar-container">
+                            <img src="svgs/dev2.png"
+                                alt="Ольга Демидова"
+                                class="round-avatar">
+                            </div>
+                            <div class="review-author">
+                                <h5>Ольга Демидова</h5>
+                                <span class="text-muted">Онлайн-школа</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>Интеграция с PayPal спасла при работе с иностранными клиентами. Теперь все платежи в одной системе, а комиссии ниже на 30%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="avatar-container">
+                            <img src="svgs/dev1.png"
+                                alt="Александра Ковалёва"
+                                class="round-avatar">
+                            </div>
+                            <div class="review-author">
+                                <h5>Александра Ковалёва</h5>
+                                <span class="text-muted">ИП, Цветочная мастерская</span>
+                            </div>
+                        </div>
+                        <div class="review-body">
+                            <p>Открыла расчётный счёт за 2 часа! Онлайн-бухгалтерия сэкономила мне 10 часов в неделю. Отдельное спасибо за подробные видеоинструкции по работе с личным кабинетом.</p>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- Добавить остальные слайды -->
+            </div>
+            
+            <!-- Навигационные стрелки -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Подключение Swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<style>
+
+.avatar-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 2px solid var(--accent);
+}
+
+.round-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.reviews-section {
+    background: var(--surface);
+    padding: 6rem 0;
+}
+
+.reviews-slider {
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.review-card {
+    background: var(--bg);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--divider);
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--accent) !important;
+    background: var(--surface);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: scale(1.1);
+}
+.review-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Остальные стили из предыдущего примера */
+</style>
+
+<script>
+const reviewsSwiper = new Swiper('.reviews-slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        }
+    }
+});
+</script>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Частые вопросы</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <h5>Какие документы нужны?</h5>
+                        <p class="text-secondary">Паспорт, ИНН и документы компании</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h5>Сколько времени занимает процесс?</h5>
+                        <p class="text-secondary">От 1 до 3 рабочих дней</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h5>Есть ли скрытые комиссии?</h5>
+                        <p class="text-secondary">Все комиссии указаны в договоре</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
